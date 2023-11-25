@@ -139,7 +139,6 @@ java -jar SOPKATHON-2-SERVER/build/libs/DoSoptSopkathon-0.0.1-SNAPSHOPT-plain.ja
 - [STYLE] : 코드가 아닌 스타일 변경을 하는 경우
 - [REFACTOR] : 로직은 변경 없는 클린 코드를 위한 코드 수정
 
-
 메세지 마지막에 #{이슈번호} 붙이기!!!
 ```
 
