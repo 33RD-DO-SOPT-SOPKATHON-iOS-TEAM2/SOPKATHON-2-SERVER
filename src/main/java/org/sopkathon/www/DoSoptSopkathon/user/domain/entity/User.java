@@ -1,6 +1,8 @@
 package org.sopkathon.www.DoSoptSopkathon.user.domain.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -18,6 +20,7 @@ public class User {
     private Long id;
     private String name;
     private String birthday;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
 
 
