@@ -1,9 +1,9 @@
-package org.sopkathon.www.DoSoptSopkathon.domain.controller;
+package org.sopkathon.www.DoSoptSopkathon.user.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.sopkathon.www.DoSoptSopkathon.domain.controller.dto.request.CreateUserRequest;
-import org.sopkathon.www.DoSoptSopkathon.domain.domain.entity.User;
-import org.sopkathon.www.DoSoptSopkathon.domain.service.UserService;
+import org.sopkathon.www.DoSoptSopkathon.user.controller.dto.request.CreateUserRequest;
+import org.sopkathon.www.DoSoptSopkathon.user.domain.entity.User;
+import org.sopkathon.www.DoSoptSopkathon.user.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
