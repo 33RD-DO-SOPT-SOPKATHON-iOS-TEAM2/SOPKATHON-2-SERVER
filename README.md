@@ -4,7 +4,8 @@
 # ✨ Last Anniversary
 
 ```  
-서비스 한 줄 소개
+조용하고 엄숙한 장례식장에서 지켜야 하는 관례를 깨부수는 
+나만의 장례 기념일, last anniversary!
 ```
 
 > 33기 DO SOPT 솝커톤 iOS 2조
