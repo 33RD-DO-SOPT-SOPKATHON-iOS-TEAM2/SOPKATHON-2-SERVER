@@ -12,7 +12,7 @@
 <hr>
 
 ## 🌸 Contributors 섭팟이들
-우리 이미지
+<img width="500" alt="image" src="https://github.com/33RD-DO-SOPT-SOPKATHON-iOS-TEAM2/SOPKATHON-2-SERVER/assets/78674565/3c431f99-2f93-4a77-8021-76dad3cad2ea">
 
 |                   정준서                   |                   송하연                   |
 |:---------------------------------------:|:---------------------------------------:|
