@@ -6,9 +6,13 @@ import org.sopkathon.www.DoSoptSopkathon.card.exception.CardException;
 import org.sopkathon.www.DoSoptSopkathon.card.exception.CardExceptionType;
 import org.springframework.data.repository.Repository;
 
+import java.util.List;
+
 public interface CardRepository extends Repository<Card, Long> {
 
     void save(Card card);
+
+    List<Card> findAll();
 
     Optional<Card> findByUserId(Long userId);
 
