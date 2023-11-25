@@ -11,8 +11,7 @@ import java.util.List;
 public interface CardRepository extends Repository<Card, Long> {
 
     void save(Card card);
-
-    List<Card> findAll();
+    List<Card> findAllByOrderByCreatedAtDesc();
 
     Optional<Card> findByUserId(Long userId);
 

@@ -18,6 +18,7 @@
 |                   정준서                   |                   송하연                   |
 |:---------------------------------------:|:---------------------------------------:|
 | [sunseo18](https://github.com/sunseo18) | [hysong4u](https://github.com/hysong4u) |
+| 31, 32, 33기 서버 OB 24살 | 33기 갓기 YB 22살 송하연 |
 
 <hr>
 
@@ -43,7 +44,59 @@
 | AWS ec2     |    -    |
 | mysql       | 8.0.33  |
 | rds         |    -    |
+| nginx       |  1.18.0 |
 
+<hr>
+
+## ？ How to run
+```
+
+# 1. 프로젝트 파일 복사
+git clone https://github.com/33RD-DO-SOPT-SOPKATHON-iOS-TEAM2/SOPKATHON-2-SERVER.git
+
+# 2. 설정 파일 생성
+vi SOPKATHON-2-SERVER/source/main/resources/application.yaml
+
+# 3. 빌드 ( 프로젝트 최상위에서 실행 )
+./gradlew build -x test
+
+# 4. 실행 ( SOPKATHON-2-SERVER/build/libs 하위 jar 생성 )
+java -jar SOPKATHON-2-SERVER/build/libs/DoSoptSopkathon-0.0.1-SNAPSHOPT-plain.jar
+
+
+```
+
+## 🤖 Architect
+<img width="1122" alt="image" src="https://github.com/33RD-DO-SOPT-SOPKATHON-iOS-TEAM2/SOPKATHON-2-SERVER/assets/78674565/6f14713f-3a20-4f75-b8be-50b9b5ddb040">
+
+
+## 🗂️ Folder
+```
+🗂️
+|_ 🗂️ {Domain}
+|  |_ 🗂️ domain
+|  |  |_ 🗂️ entity
+|  |  |_ 🗂️ repository
+|  |
+|  |_ 🗂️ controller
+|  |  |
+|  |  |_ 🗂️ dto
+|  |      |_ 🗂️ request
+|  |      |_ 🗂️ response
+|  |
+|  |_ 🗂️ service
+|  |
+|  |_ 🗂️ exception
+|  
+|_ 🗂️ common
+|   |
+|   |_ 🗂️ config
+|   |_ 🗂️ domain
+|
+|_ 🗂️ exception
+
+
+```
 
 # 🌱 Branch
 
@@ -57,7 +110,7 @@
 
 -   구현할 것들 별로 issue 생성
 -   issue 번호를 기반으로 branch 생성
-    -   ex) feat/#이슈번호
+    -   ex) feature/#이슈번호
 
 
 -   해당 branch 작업 완료 후 PR 보내기
@@ -85,12 +138,26 @@
 - [MERGE]: 다른브렌치를 merge하는 경우
 - [STYLE] : 코드가 아닌 스타일 변경을 하는 경우
 - [REFACTOR] : 로직은 변경 없는 클린 코드를 위한 코드 수정
+
+메세지 마지막에 #{이슈번호} 붙이기!!!
 ```
 
 # 🙏 Code Convention
 
 > 💡 **동료들과 말투를 통일하기 위해 컨벤션을 지정합니다.**
 > 오합지졸의 코드가 아닌, **한 사람이 짠 것같은 코드**를 작성하는 것이 추후 유지보수나 협업에서 도움이 됩니다. 내가 코드를 생각하면서 짤 수 있도록 해주는 룰이라고 생각해도 좋습니다!
+
+<details>
+<summary>헷갈리는 것들 미리 정하기</summary>
+<div markdown="1">
+    
+    - Dto 이름은 Create/Get + Entity + Request/Response + Dto
+    
+    - Success 응답은 래핑하지 않고 Exception 응답만 래핑한다.
+    
+</div>
+</details>
+
 
 <details>
 <summary>명명규칙(Naming Conventions)</summary>
