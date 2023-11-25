@@ -13,7 +13,7 @@ public enum UserExceptionType implements ExceptionType {
 
     @Override
     public HttpStatus httpStatus() {
-        return httpStatus();
+        return httpStatus;
     }
 
     @Override
