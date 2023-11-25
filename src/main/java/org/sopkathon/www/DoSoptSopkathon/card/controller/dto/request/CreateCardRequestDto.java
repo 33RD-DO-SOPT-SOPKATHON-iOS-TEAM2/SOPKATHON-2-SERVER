@@ -1,4 +1,4 @@
-package org.sopkathon.www.DoSoptSopkathon.card.controller.dto;
+package org.sopkathon.www.DoSoptSopkathon.card.controller.dto.request;
 
 import org.sopkathon.www.DoSoptSopkathon.card.domain.entity.Alcohol;
 import org.sopkathon.www.DoSoptSopkathon.card.domain.entity.DressCode;
