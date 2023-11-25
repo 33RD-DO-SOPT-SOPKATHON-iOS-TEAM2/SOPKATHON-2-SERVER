@@ -1,7 +1,8 @@
 package org.sopkathon.www.DoSoptSopkathon.card.service;
 
 import lombok.RequiredArgsConstructor;
-import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.CreateCardRequestDto;
+import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.request.CreateCardRequestDto;
+import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.response.GetCardResponseDto;
 import org.sopkathon.www.DoSoptSopkathon.card.domain.entity.Card;
 import org.sopkathon.www.DoSoptSopkathon.card.domain.repository.CardRepository;
 import org.sopkathon.www.DoSoptSopkathon.user.domain.entity.User;
@@ -32,5 +33,12 @@ public class CardService {
                 .build();
 
         cardRepository.save(card);
+    }
+
+    public GetCardResponseDto getCardByUser(Long userId) {
+        User user = userRepository.findByIdOrElseThrowException(userId);
+        Card card = cardRepository.getCardByUserOrElseThrowException(user.getId());
+
+        return GetCardResponseDto.of(user, card);
     }
 }
