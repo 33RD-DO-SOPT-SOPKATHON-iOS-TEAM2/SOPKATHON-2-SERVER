@@ -1,7 +1,7 @@
 package org.sopkathon.www.DoSoptSopkathon.card.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.GetSharedCardResponse;
+import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.GetSharedCardResponseDto;
 import org.sopkathon.www.DoSoptSopkathon.card.service.SharedCardService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,8 +17,7 @@ public class SharedCardController {
 
     private final SharedCardService sharedCardService;
     @GetMapping
-    public ResponseEntity<List<GetSharedCardResponse>> sharedCards() {
-        List<GetSharedCardResponse> sharedCards = sharedCardService.getSharedCards();
-        return ResponseEntity.ok(sharedCards);
+    public ResponseEntity<List<GetSharedCardResponseDto>> sharedCards() {
+        return ResponseEntity.ok(sharedCardService.getSharedCards());
     }
 }

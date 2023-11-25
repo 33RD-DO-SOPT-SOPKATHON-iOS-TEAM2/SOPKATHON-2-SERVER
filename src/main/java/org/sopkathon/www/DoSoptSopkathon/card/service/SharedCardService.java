@@ -1,7 +1,7 @@
 package org.sopkathon.www.DoSoptSopkathon.card.service;
 
 import lombok.RequiredArgsConstructor;
-import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.GetSharedCardResponse;
+import org.sopkathon.www.DoSoptSopkathon.card.controller.dto.GetSharedCardResponseDto;
 import org.sopkathon.www.DoSoptSopkathon.card.domain.entity.Card;
 import org.sopkathon.www.DoSoptSopkathon.card.domain.repository.CardRepository;
 import org.springframework.stereotype.Service;
@@ -15,16 +15,14 @@ import java.util.List;
 public class SharedCardService {
     private final CardRepository cardRepository;
 
-    public List<GetSharedCardResponse> getSharedCards() {
+    public List<GetSharedCardResponseDto> getSharedCards() {
         List<Card> cards = cardRepository.findAll();
-        List<GetSharedCardResponse> responses = cards.stream()
+        return cards.stream()
                 .map(card -> {
-                    return GetSharedCardResponse.of(card.getUser(), card);
+                    return GetSharedCardResponseDto.of(card.getUser(), card);
                 })
                 .toList();
 
-        return responses;
     }
-
 
 }
