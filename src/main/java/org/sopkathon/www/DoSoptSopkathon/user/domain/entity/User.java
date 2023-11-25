@@ -1,4 +1,4 @@
-package org.sopkathon.www.DoSoptSopkathon.domain.domain.entity;
+package org.sopkathon.www.DoSoptSopkathon.user.domain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

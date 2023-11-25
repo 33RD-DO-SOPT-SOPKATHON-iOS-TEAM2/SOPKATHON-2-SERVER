@@ -1,10 +1,9 @@
-package org.sopkathon.www.DoSoptSopkathon.domain.controller.dto.request;
+package org.sopkathon.www.DoSoptSopkathon.user.controller.dto.request;
 
 import lombok.AccessLevel;
 import lombok.Builder;
-import lombok.Getter;
-import org.sopkathon.www.DoSoptSopkathon.domain.domain.entity.Gender;
-import org.sopkathon.www.DoSoptSopkathon.domain.domain.entity.User;
+import org.sopkathon.www.DoSoptSopkathon.user.domain.entity.Gender;
+import org.sopkathon.www.DoSoptSopkathon.user.domain.entity.User;
 
 @Builder(access = AccessLevel.PRIVATE)
 public record CreateUserRequest(
